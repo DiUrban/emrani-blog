@@ -1,0 +1,24 @@
+'use client'
+import Image from 'next/image'
+import Link from 'next/link'
+import React, {FormEvent, useState} from 'react'
+import Logo from '../public/Logo.png'
+import {ToastContainer, toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import SignupForm from './SignupForm'
+type Props = {}
+
+function Header({}: Props) {
+  return (
+    <header className="flex items-center justify-between space-x-2 font-bold px-10 py-5">
+      <div className="flex items-center space-x-2 relative">
+        <Link href={'/'}>
+          <Image src={Logo} width={200} height={30} alt="logo" />
+        </Link>
+      </div>
+      <SignupForm />
+    </header>
+  )
+}
+
+export default Header
