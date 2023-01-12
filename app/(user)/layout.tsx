@@ -1,4 +1,5 @@
 import Banner from '../../components/Banner'
+import ContactPage from '../../components/ContactPage'
 import Header from '../../components/Header'
 import '../../styles/globals.css'
 export default function RootLayout({children}: {children: React.ReactNode}) {
@@ -9,6 +10,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <Header />
         <Banner />
         {children}
+        <ContactPage />
       </body>
     </html>
   )
